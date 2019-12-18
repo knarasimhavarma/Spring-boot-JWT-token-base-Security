@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="/users/save" method="post" th:object="${user}">
+   name:<br>
+  <input type="text" name="name" th:field="${user.name}" >
+  <br>
+  age:<br>
+  <input type="text" name="age" th:field="${user.age}" >
+  <br>
+  gender:<br>
+  <select name="gender" th:field="${user.gender}">
+  <option type="text" th:value="male" >male</option>
+  <option type="text" th:value="female" >female</option>
+  </select>
+  <br>
+  city:<br>
+  <input type="text" name="city" th:field="${user.city}">
+  <br><br>
+  <input type="submit" value="save">
+</form>
+</body>
+</html>
