@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.example.varma.dao.ProjectRepository;
 import com.example.varma.service.UserService;
 import com.example.varma.vo.User;
 
@@ -27,6 +28,9 @@ public class ControllerEndPoint {
 
 	@Autowired
 	UserService userService;
+
+	@Autowired
+	ProjectRepository proRepo;
 
 
 	@GetMapping("/new")
